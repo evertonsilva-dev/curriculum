@@ -9,6 +9,7 @@ export const SidebarWrapper = styled.aside`
   }
   @media only screen and (max-width: 425px) {
     padding: 50px 25px;
+    padding-bottom: 0;
   }
 `;
 export const ProfilePicture = styled.picture`
@@ -179,6 +180,10 @@ export const Skills = styled.section`
   }
   @media only screen and (max-width: 425px) {
     width: auto;
+    padding-bottom:0;
+    .cont-skills{
+      padding-bottom: 0;
+    }
   }
   .cont-skills {
     padding: 40px 0;

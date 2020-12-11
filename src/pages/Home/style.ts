@@ -12,6 +12,7 @@ export const CurriculoContainer = styled(Container)`
   border-bottom: 50px solid ${Primaria};
   @media only screen and (max-width: 991px) {
     grid-template-columns: 1fr;
+    gap:0px;
   }
 `;
 
