@@ -30,7 +30,7 @@ export default function Sidebar() {
   return (
     <SidebarWrapper>
       <ProfilePicture>
-        <img src={`${imageExists(config.baseUrl + user.profilePicture.url) ? `${config.baseUrl}${user.profilePicture.url}`: '/profile.jpg'}`} alt="" />
+        <img src={`${imageExists(config.baseUrl + user.profilePicture.url.slice(1)) ? `${config.baseUrl}${user.profilePicture.url.slice(1)}`: '/profile.jpg'}`} alt="" />
       </ProfilePicture>
       <ProfileData>
         <h1>{user.name}</h1>
