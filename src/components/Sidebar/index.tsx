@@ -18,11 +18,19 @@ import {
 
 export default function Sidebar() {
   const { user } = useContext(ProfileContext);
+  const imageExists = (image_url:string)=>{
 
+    var http = new XMLHttpRequest();
+
+    http.open('HEAD', image_url, false);
+    http.send();
+
+    return http.status != 404;
+}
   return (
     <SidebarWrapper>
       <ProfilePicture>
-        <img src={`${config.baseUrl}${user.profilePicture.url}`} alt="" />
+        <img src={`${imageExists(config.baseUrl + user.profilePicture.url) ? `${config.baseUrl}${user.profilePicture.url}`: '/profile.jpg'}`} alt="" />
       </ProfilePicture>
       <ProfileData>
         <h1>{user.name}</h1>
